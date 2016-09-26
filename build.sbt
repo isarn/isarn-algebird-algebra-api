@@ -1,4 +1,4 @@
-name := "isarn-algebra-api"
+name := "isarn-algebird-algebra-api"
 
 organization := "org.isarnproject"
 
@@ -35,4 +35,4 @@ site.jekyllSupport()
 
 ghpages.settings
 
-git.remoteRepo := "git@github.com:isarn/isarn-algebra-api.git"
+git.remoteRepo := "git@github.com:isarn/isarn-algebird-algebra-api.git"
