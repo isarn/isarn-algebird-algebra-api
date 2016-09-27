@@ -10,6 +10,8 @@ crossScalaVersions := Seq("2.10.6", "2.11.8")
 
 def commonSettings = Seq(
   libraryDependencies ++= Seq(
+    "com.twitter" %% "algebird-core" % "0.12.1",
+    "org.isarnproject" %% "isarn-algebra-api" % "0.0.1",
     "org.scalatest" %% "scalatest" % "2.2.4" % Test
   )
 )
@@ -19,7 +21,6 @@ seq(commonSettings:_*)
 seq(bintraySettings:_*)
 
 seq(bintrayPublishSettings:_*)
-
 
 licenses += ("Apache-2.0", url("http://opensource.org/licenses/Apache-2.0"))
 
