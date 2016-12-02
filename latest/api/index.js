@@ -1,0 +1,1 @@
+Index.PACKAGES = {"org" : [], "org.isarnproject" : [], "org.isarnproject.algebirdAlgebraAPI" : [{"object" : "org\/isarnproject\/algebirdAlgebraAPI\/implicits$.html", "name" : "org.isarnproject.algebirdAlgebraAPI.implicits"}]};
