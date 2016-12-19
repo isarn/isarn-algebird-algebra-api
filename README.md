@@ -10,7 +10,7 @@ https://isarn.github.io/isarn-algebird-algebra-api/latest/api/
 ``` scala
 resolvers += "isarn project" at "https://dl.bintray.com/isarn/maven/"
 
-libraryDependencies += "org.isarnproject" %% "isarn-algebird-algebra-api" % "0.0.1"
+libraryDependencies += "org.isarnproject" %% "isarn-algebird-algebra-api" % "0.0.2"
 ```
 
 #### maven
