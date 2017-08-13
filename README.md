@@ -6,19 +6,6 @@ https://isarn.github.io/isarn-algebird-algebra-api/latest/api/
 
 ### How to use in your project
 
-#### sbt
 ``` scala
-resolvers += "isarn project" at "https://dl.bintray.com/isarn/maven/"
-
-libraryDependencies += "org.isarnproject" %% "isarn-algebird-algebra-api" % "0.0.2"
-```
-
-#### maven
-``` xml
-<dependency> 
-  <groupId>org.isarnproject</groupId>
-  <artifactId>isarn-algebird-algebra-api_2.10</artifactId> 
-  <version>0.0.1</version> 
-  <type>pom</type> 
-</dependency>
+libraryDependencies += "org.isarnproject" %% "isarn-algebird-algebra-api" % "0.0.3"
 ```
