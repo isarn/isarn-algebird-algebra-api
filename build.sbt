@@ -1,16 +1,16 @@
+// xsbt clean unidoc previewSite
+// xsbt clean unidoc ghpagesPushSite
+// xsbt -Dsbt.global.base=/home/eje/.sbt/sonatype +publish
+
 name := "isarn-algebird-algebra-api"
 
 organization := "org.isarnproject"
 
-bintrayOrganization := Some("isarn")
+version := "0.0.4"
 
-version := "0.0.3"
+scalaVersion := "2.11.12"
 
-scalaVersion := "2.11.8"
-
-crossScalaVersions := Seq("2.10.6", "2.11.8")
-
-useGpg := true
+crossScalaVersions := Seq("2.11.12", "2.12.6")
 
 pomIncludeRepository := { _ => false }
 
@@ -44,27 +44,20 @@ developers := List(
   )
 )
 
-def commonSettings = Seq(
-  libraryDependencies ++= Seq(
-    "com.twitter" %% "algebird-core" % "0.13.0",
-    "org.isarnproject" %% "isarn-algebra-api" % "0.0.2",
-    "org.scalatest" %% "scalatest" % "2.2.4" % Test
-  )
+libraryDependencies ++= Seq(
+  "com.twitter" %% "algebird-core" % "0.13.4" % Provided,
+  "org.isarnproject" %% "isarn-algebra-api" % "0.0.3" % Provided,
+  "org.scalatest" %% "scalatest" % "3.0.5" % Test
 )
-
-seq(commonSettings:_*)
 
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
 scalacOptions in (Compile, doc) ++= Seq("-doc-root-content", baseDirectory.value+"/root-doc.txt")
 
-site.settings
+enablePlugins(ScalaUnidocPlugin, GhpagesPlugin)
 
-site.includeScaladoc()
+siteSubdirName in ScalaUnidoc := "latest/api"
 
-// enable to support jekyll pages
-// site.jekyllSupport()
-
-ghpages.settings
+addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), siteSubdirName in ScalaUnidoc)
 
 git.remoteRepo := "git@github.com:isarn/isarn-algebird-algebra-api.git"
